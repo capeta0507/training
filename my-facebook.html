@@ -22,7 +22,7 @@ function statusChangeCallback(response) {
 function login(){
     FB.login(function(response){
         statusChangeCallback(response);
-    });
+    },{scope:"email,user_gender"}););
 }
 // 2. 載入完成後，呼叫 window.fbAsyncInit 函式
 window.fbAsyncInit = function() {
