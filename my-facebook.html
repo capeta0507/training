@@ -15,6 +15,7 @@ function statusChangeCallback(response) {
     main.style.display="none";
     if (response.status === 'connected') { //使用者已登入
       main.style.display="block";
+        testAPI(); //抓取使用者的資料
     } else { //使用者未登入，鼓勵使用者登入
         welcome.style.display="block";
     }
