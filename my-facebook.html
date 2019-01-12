@@ -19,6 +19,11 @@ function statusChangeCallback(response) {
         welcome.style.display="block";
     }
 }
+function login(){
+    FB.login(function(response){
+        statusChangeCallback(response);
+    });
+}
 // 2. 載入完成後，呼叫 window.fbAsyncInit 函式
 window.fbAsyncInit = function() {
     // 初始化 Facebook SDK 套件
