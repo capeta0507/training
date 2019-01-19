@@ -15,13 +15,11 @@
         apiKey: "AIzaSyD-OI9FQHzKqyEsq0_4sILcqLLrpgUK2B4",
         authDomain: "fb-project-a45d3.firebaseapp.com",
         databaseURL: "https://fb-project-a45d3.firebaseio.com",
-        projectId: "fb-project-a45d3",
-        storageBucket: "fb-project-a45d3.appspot.com",
-        messagingSenderId: "1082829604818"
+        projectId: "fb-project-a45d3"
     };
     firebase.initializeApp(config);
     let auth = firebase.auth();
-    var provider = new firebase.auth.FacebookAuthProvider();
+    let provider = new firebase.auth.FacebookAuthProvider();
     provider.addScope('user_birthday');
     // 當使用者的登入狀態變化的時候，執行我們提供的函式
     auth.onAuthStateChanged(function (user) {
