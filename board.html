@@ -39,9 +39,9 @@
     });
     function signIn() {
         auth.signInWithPopup(provider).then(function (result) {
-
+            console.log(result);
         }).catch(function (error) {
-
+            console.log(error);
         });
     }
 </script>
