@@ -90,7 +90,7 @@
             } else { //登入狀態
                 if (currentUser.uid === message.id) { //和留言的作者是同一個人
                     list.innerHTML = message.name.bold() + " " + message.content +
-                        "<button onclick='del(\"" + message.id + "\");'>Delete</button>" +
+                        "<button onclick='del(\"" + message.key + "\");'>Delete</button>" +
                         "<hr/>" + list.innerHTML;
                 } else { //不同一個人
                     list.innerHTML = message.name.bold() + " " + message.content + "<hr/>" +
